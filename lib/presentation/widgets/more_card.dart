@@ -34,7 +34,10 @@ class MoreCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Icon(Icons.directions_car_rounded,color: Colors.white,),
+                  Icon(
+                    Icons.directions_car_rounded,
+                    color: Colors.white,
+                  ),
                   Text(
                     "> ${car.distance} km",
                     style: TextStyle(fontSize: 14, color: Colors.white),
@@ -56,10 +59,13 @@ class MoreCard extends StatelessWidget {
                   ),
                 ],
               ),
-              
             ],
           ),
-           Icon(Icons.arrow_forward_ios, color: Colors.white, size: 24,)
+          Icon(
+            Icons.arrow_forward_ios,
+            color: Colors.white,
+            size: 24,
+          )
         ],
       ),
     );

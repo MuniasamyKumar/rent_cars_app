@@ -34,14 +34,15 @@ class MapDetailsPage extends StatelessWidget {
               )
             ],
           ),
-          Positioned(bottom: 0, left: 0, right: 0, child: carDetailsCard(car: car))
+          Positioned(
+              bottom: 0, left: 0, right: 0, child: carDetailsCard(car: car))
         ],
       ),
     );
   }
 }
 
-Widget carDetailsCard( {required car}) {
+Widget carDetailsCard({required car}) {
   return SizedBox(
     height: 350,
     child: Stack(
@@ -104,7 +105,6 @@ Widget carDetailsCard( {required car}) {
                   ),
                 ],
               ),
-             
             ],
           ),
         ),
@@ -140,7 +140,8 @@ Widget carDetailsCard( {required car}) {
                     ),
                     ElevatedButton(
                         onPressed: () {},
-                        style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black),
                         child: Text(
                           "Book Now",
                           style: TextStyle(color: Colors.white),
@@ -150,14 +151,9 @@ Widget carDetailsCard( {required car}) {
               ],
             ),
           ),
-        )
-      
-      , Positioned(
-        
-        top: 50,
-        right: 20,
-        child: Image.asset("assets/white_car.png"))
-      
+        ),
+        Positioned(
+            top: 50, right: 20, child: Image.asset("assets/white_car.png"))
       ],
     ),
   );
@@ -167,9 +163,9 @@ Widget featureIcons() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
-     featureIcon(Icons.local_gas_station, "Diesel", "Common Rail"),
-     featureIcon(Icons.speed, "Acceleration", "0 - 100km/s"),
-     featureIcon(Icons.ac_unit, "Cold", "Temp Control"),
+      featureIcon(Icons.local_gas_station, "Diesel", "Common Rail"),
+      featureIcon(Icons.speed, "Acceleration", "0 - 100km/s"),
+      featureIcon(Icons.ac_unit, "Cold", "Temp Control"),
     ],
   );
 }

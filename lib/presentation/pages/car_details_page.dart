@@ -21,11 +21,10 @@ class _CarDetailsPageState extends State<CarDetailsPage>
   void initState() {
     _controller =
         AnimationController(vsync: this, duration: Duration(seconds: 2));
-    _animation = Tween<double>(begin: 10, end: 1.5).animate(_controller!)..addListener((){
-      setState(() {
-        
+    _animation = Tween<double>(begin: 10, end: 1.5).animate(_controller!)
+      ..addListener(() {
+        setState(() {});
       });
-    });
     _controller!.forward();
 
     super.initState();
@@ -125,14 +124,16 @@ class _CarDetailsPageState extends State<CarDetailsPage>
                                   blurRadius: 10,
                                   spreadRadius: 5)
                             ]),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Transform.scale(
-                                scale: _animation!.value,
-                                alignment: Alignment.center,
-                                child: Image.asset("assets/maps.png",fit: BoxFit.cover,)
-                              ),
-                            ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Transform.scale(
+                              scale: _animation!.value,
+                              alignment: Alignment.center,
+                              child: Image.asset(
+                                "assets/maps.png",
+                                fit: BoxFit.cover,
+                              )),
+                        ),
                       ),
                     ),
                   )

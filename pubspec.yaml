@@ -41,6 +41,7 @@ dependencies:
   bloc:
   flutter_bloc:
   get_it: ^8.0.3
+  flutter_launcher_icons: ^0.14.1
 
 
 dev_dependencies:
@@ -95,3 +96,12 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/onboarding (1).png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  adaptive_icon_background: "#000000"
+  adaptive_icon_foreground: "assets/onboarding (1).png"

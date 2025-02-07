@@ -28,7 +28,7 @@ class CarListScreen extends StatelessWidget {
             return ListView.builder(
               itemCount: state.cars.length,
               itemBuilder: (context, index) {
-                return CarCard(car: state.cars[index]); 
+                return CarCard(car: state.cars[index]);
               },
             );
           } else if (state is CarsError) {
